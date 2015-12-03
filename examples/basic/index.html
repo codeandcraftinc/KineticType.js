@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>kinetic</title>
+</head>
+<body>
+  <div class="target"></div>
+  <script src="../../dist/kinetic.min.js"></script>
+  <script>
+  var k = new Kinetic(document.querySelectorAll('.target')[0], [
+    'one',
+    'two',
+    'three',
+    'hey!'
+  ], {
+    loop: false
+  })
+  </script>
+</body>
+</html>
