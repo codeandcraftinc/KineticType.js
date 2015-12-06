@@ -4,17 +4,22 @@
   <title>kinetic</title>
 </head>
 <body>
-  <div class="target"></div>
-  <script src="../../dist/kinetic.min.js"></script>
+  <div class="target">hiya</div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="../../dist/kinetic-type.js"></script>
   <script>
-  var k = new Kinetic(document.querySelectorAll('.target')[0], [
-    'one',
-    'two',
-    'three',
-    'hey!'
-  ], {
-    loop: false
+  var el = document.querySelector('.target');
+  var k = new KineticType(el, ['one', 'two', 'three'], {
+    run: true
   })
+
+  k.on('started', console.log.bind(console, 'started'))
+  k.on('stopped', console.log.bind(console, 'stopped'))
+  k.on('typing', console.log.bind(console, 'typing'))
+  k.on('typed', console.log.bind(console, 'typed'))
+  k.on('backspacing', console.log.bind(console, 'backspacing'))
+  k.on('backspaced', console.log.bind(console, 'backspaced'))
+
   </script>
 </body>
 </html>

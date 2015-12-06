@@ -5,8 +5,8 @@ module.exports = {
   entry: './lib/index.js',
   output: {
     path: './dist',
-    filename: 'kinetic.js',
-    library: 'Kinetic',
+    filename: 'kinetic-type.js',
+    library: 'KineticType',
     libraryTarget: 'umd'
   },
   module: {
